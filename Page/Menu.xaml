@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EspacioMaticoMovil.Page.Menu"
+             BackgroundColor="#d5dcff"
+             Title="Menu">
+
+    <Grid Padding="20" RowSpacing="20" ColumnSpacing="20">
+        <Grid RowDefinitions="Auto, Auto, *, *"
+              ColumnDefinitions="Auto, *">
+
+            <!-- Botón flotante Home -->
+            <Button Grid.Row="0" Grid.Column="0"
+                    BackgroundColor="Transparent"
+                    Text="&#xf015;"
+                    FontFamily="FA"
+                    FontSize="24"
+                    TextColor="Black"
+                    WidthRequest="40"
+                    HeightRequest="40"/>
+
+            <!-- Logo -->
+            <Image Grid.Row="0" Grid.Column="1"
+                   Source="logo_espaciomatico.png"
+                   HeightRequest="80"
+                   HorizontalOptions="Center"/>
+
+            <!-- Botones grandes -->
+            <Grid Grid.Row="1" Grid.ColumnSpan="2"
+                  ColumnDefinitions="*,*"
+                  RowDefinitions="*,*"
+                  ColumnSpacing="20"
+                  RowSpacing="20"
+                  Padding="10">
+
+                <Button Grid.Row="0" Grid.Column="0"
+                        BackgroundColor="#4e52f9"
+                        Text="&#xf015;  Home"
+                        FontFamily="FA"
+                        FontSize="20"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        HeightRequest="100"/>
+
+                <Button Grid.Row="0" Grid.Column="1"
+                        BackgroundColor="#4e52f9"
+                        Text="&#xf007;  Acerca de"
+                        FontFamily="FA"
+                        FontSize="20"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        HeightRequest="100"/>
+
+                <Button Grid.Row="1" Grid.Column="0"
+                        BackgroundColor="#4e52f9"
+                        Text="&#xf0e8;  Servicios"
+                        FontFamily="FA"
+                        FontSize="20"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        HeightRequest="100"/>
+
+                <Button Grid.Row="1" Grid.Column="1"
+                        BackgroundColor="#4e52f9"
+                        Text="&#xf2f5;  Salir"
+                        FontFamily="FA"
+                        FontSize="20"
+                        TextColor="Black"
+                        CornerRadius="10"
+                        HeightRequest="100"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>
