@@ -2,73 +2,123 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EspacioMaticoMovil.Page.Menu"
-             BackgroundColor="#d5dcff"
+             BackgroundColor="#D1DAFD"
              Title="Menu">
 
-    <Grid Padding="20" RowSpacing="20" ColumnSpacing="20">
-        <Grid RowDefinitions="Auto, Auto, *, *"
-              ColumnDefinitions="Auto, *">
+    <VerticalStackLayout>
+        <Image Source="logo5.png"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               WidthRequest="200"
+               Margin="0,0,0,100"/>
 
-            <!-- Botón flotante Home -->
-            <Button Grid.Row="0" Grid.Column="0"
-                    BackgroundColor="Transparent"
-                    Text="&#xf015;"
-                    FontFamily="FA"
-                    FontSize="24"
-                    TextColor="Black"
-                    WidthRequest="40"
-                    HeightRequest="40"/>
+        <Grid ColumnSpacing="20" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-            <!-- Logo -->
-            <Image Grid.Row="0" Grid.Column="1"
-                   Source="logo_espaciomatico.png"
-                   HeightRequest="80"
-                   HorizontalOptions="Center"/>
+            <!-- Home -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center">
+                <Grid WidthRequest="100" HeightRequest="100">
+                    <Button BackgroundColor="#4D4DFF"
+                            CornerRadius="0"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            WidthRequest="100"
+                            HeightRequest="100"/>
+                    <ImageButton Source="casa.png"
+                                 Clicked="OnHomeClicked"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="60"
+                                 HeightRequest="60"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Home"
+                       FontAttributes="Bold"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
 
-            <!-- Botones grandes -->
-            <Grid Grid.Row="1" Grid.ColumnSpan="2"
-                  ColumnDefinitions="*,*"
-                  RowDefinitions="*,*"
-                  ColumnSpacing="20"
-                  RowSpacing="20"
-                  Padding="10">
+            <!-- Acerca de -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                <Grid WidthRequest="100" HeightRequest="100">
+                    <Button BackgroundColor="#4D4DFF"
+                            CornerRadius="0"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            WidthRequest="100"
+                            HeightRequest="100"/>
+                    <ImageButton Source="analisisconsumo.png"
+                                 Clicked="OnAcercaDeClicked"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="60"
+                                 HeightRequest="60"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Acerca de"
+                       FontAttributes="Bold"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
 
-                <Button Grid.Row="0" Grid.Column="0"
-                        BackgroundColor="#4e52f9"
-                        Text="&#xf015;  Home"
-                        FontFamily="FA"
-                        FontSize="20"
-                        TextColor="Black"
-                        CornerRadius="10"
-                        HeightRequest="100"/>
+            <!-- Servicios -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center">
+                <Grid WidthRequest="100" HeightRequest="100">
+                    <Button BackgroundColor="#4D4DFF"
+                            CornerRadius="0"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            WidthRequest="100"
+                            HeightRequest="100"/>
+                    <ImageButton Source="servicios.png"
+                                 Clicked="OnHomeClicked"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="60"
+                                 HeightRequest="60"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Servicios"
+                       FontAttributes="Bold"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
 
-                <Button Grid.Row="0" Grid.Column="1"
-                        BackgroundColor="#4e52f9"
-                        Text="&#xf007;  Acerca de"
-                        FontFamily="FA"
-                        FontSize="20"
-                        TextColor="Black"
-                        CornerRadius="10"
-                        HeightRequest="100"/>
+            <!-- Salida -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
+                <Grid WidthRequest="100" HeightRequest="100">
+                    <Button BackgroundColor="#4D4DFF"
+                            CornerRadius="0"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            WidthRequest="100"
+                            HeightRequest="100"/>
+                    <ImageButton Source="salida.png"
+                                 Clicked="OnSalidaClicked"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="60"
+                                 HeightRequest="60"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Salir"
+                       FontAttributes="Bold"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
 
-                <Button Grid.Row="1" Grid.Column="0"
-                        BackgroundColor="#4e52f9"
-                        Text="&#xf0e8;  Servicios"
-                        FontFamily="FA"
-                        FontSize="20"
-                        TextColor="Black"
-                        CornerRadius="10"
-                        HeightRequest="100"/>
-
-                <Button Grid.Row="1" Grid.Column="1"
-                        BackgroundColor="#4e52f9"
-                        Text="&#xf2f5;  Salir"
-                        FontFamily="FA"
-                        FontSize="20"
-                        TextColor="Black"
-                        CornerRadius="10"
-                        HeightRequest="100"/>
-            </Grid>
         </Grid>
-    </Grid>
+    </VerticalStackLayout>
 </ContentPage>

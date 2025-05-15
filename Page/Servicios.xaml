@@ -2,11 +2,182 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EspacioMaticoMovil.Page.Servicios"
-             Title="Servicios">
+             Title="Servicios"
+             BackgroundColor="#D1DAFD">
+
     <VerticalStackLayout>
-        <Label 
-            Text="Esta es la pagina servicios"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Image Source="logo5.png"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               WidthRequest="200"
+               Margin="0,0,0,220"/>
+        <!-- Menu -->
+        <!--Boton Home-->
+        <HorizontalStackLayout HorizontalOptions="Start" Spacing="10" Margin="10,0,0,30">
+            
+            <!-- Botón Menu -->
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Grid WidthRequest="60" HeightRequest="60">
+                    <Button BackgroundColor="#4D4DFF"
+                    CornerRadius="0"
+                    BorderColor="Black"
+                    BorderWidth="1"
+                    WidthRequest="60"
+                    HeightRequest="60"/>
+                    <ImageButton Source="hamburguesa.png"
+                    Clicked="OnMenuClicked"
+                    BackgroundColor="Transparent"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Menú"
+                FontAttributes="Bold"
+                FontSize="13"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+            
+            <!---Boton Salida-->
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Grid WidthRequest="60" HeightRequest="60">
+                    <Button BackgroundColor="#4D4DFF"
+                    CornerRadius="0"
+                    BorderColor="Black"
+                    BorderWidth="1"
+                    WidthRequest="60"
+                    HeightRequest="60"/>
+                    <ImageButton Source="salida.png"
+                    Clicked="OnSalidaClicked"
+                    BackgroundColor="Transparent"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Salida"
+                FontAttributes="Bold"
+                FontSize="13"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0,5,0,0"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+
+        <Label Text="Servicios Disponibles"
+               FontAttributes="Bold"
+               FontSize="20"
+               HorizontalOptions="Center"
+               Margin="0,0,0,50"/>
+
+        <Grid ColumnSpacing="20" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Conectividad -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center">
+                <Grid WidthRequest="100" HeightRequest="100">
+                    <Button BackgroundColor="#4D4DFF"
+                            CornerRadius="0"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            WidthRequest="100"
+                            HeightRequest="100"/>
+                    <ImageButton Source="coneccion.png"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="60"
+                                 HeightRequest="60"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Conectividad"
+                       FontAttributes="Bold"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,40"/>
+            </VerticalStackLayout>
+
+            <!-- Análisis de consumo -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                <Grid WidthRequest="100" HeightRequest="100">
+                    <Button BackgroundColor="#4D4DFF"
+                            CornerRadius="0"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            WidthRequest="100"
+                            HeightRequest="100"/>
+                    <ImageButton Source="analisisconsumo.png"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="60"
+                                 HeightRequest="60"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Análisis de consumo"
+                       FontAttributes="Bold"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,40"/>
+            </VerticalStackLayout>
+
+            <!-- Seguridad -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center">
+                <Grid WidthRequest="100" HeightRequest="100">
+                    <Button BackgroundColor="#4D4DFF"
+                            CornerRadius="0"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            WidthRequest="100"
+                            HeightRequest="100"/>
+                    <ImageButton Source="seguridad.png"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="60"
+                                 HeightRequest="60"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Seguridad"
+                       FontAttributes="Bold"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+            <!-- Información integral -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
+                <Grid WidthRequest="100" HeightRequest="100">
+                    <Button BackgroundColor="#4D4DFF"
+                            CornerRadius="0"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            WidthRequest="100"
+                            HeightRequest="100"/>
+                    <ImageButton Source="informacionintegral.png"
+                                 BackgroundColor="Transparent"
+                                 WidthRequest="60"
+                                 HeightRequest="60"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"/>
+                </Grid>
+                <Label Text="Información integral"
+                       FontAttributes="Bold"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
